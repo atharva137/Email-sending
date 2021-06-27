@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body
+    style="background-color:rgb(187, 183, 183);
+    text-align:center;"
+  >
+  
+    <div style="margin:70px; ">
+     
+      <table
+        style="width:80%; height:35px; margin-left:116px; margin-top:20px"
+        class="table table-striped table-responsive"
+      >
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>Subject</th>
+        </tr>
+        {{!-- using #each for loop for looping in database --}}
+        
+
+          <tr>
+            <td>{{fromemail}}</td>
+            <td>{{tomail}}</td>
+            <td>{{subject}}</td>
+          
+          </tr>
+
+       
+      </table>
+    </div>
+  </body>
+</html>

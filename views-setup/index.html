@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Registration</h1>
+    <form id="reg-form">
+        <input type="text" autocomplete="off" id="username" placeholder="Username" />
+        <input type="password" autocomplete="off" id="password" placeholder="Password" />
+        <input type="submit" value="Submit Form" />
+    </form> -->
+    <div class="registration-form">
+		<form id="reg-form">
+				<div class="form-icon">
+					<span><i class="icon icon-user"></i></span>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control item" id="username" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control item" id="emailId" placeholder="E-mail Address">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control item" id="password" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control item" placeholder="Confirm passsword">
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-block create-account">Signup</button>
+				</div>
+	
+				  <p>Already Registered ?</p>
+				  <div class="form-group">
+					  <!-- <button type="button" class="btn btn-block create-account" style="background-color:#CD113B" value="Submit Form">Login Here</button> -->
+					  <a href="/login.html" class="btn btn-block create-account"style="background-color:#CD113B" >Login</a>
+				  </div>
+	
+			</form>
+			</div>
+    <script>
+		var global = 0;
+        const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const password = document.getElementById('password').value
+				const emailId = document.getElementById('emailId').value
+                                          
+				const result = await fetch('/api/signup', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({  
+						username,
+					    emailId,
+						password,
+					})
+				}).then((res) => res.json())
+                if (result.status === 'ok') {
+					// everythign went fine
+					
+			window.location.replace('/email-app.html'); 
+               } else {
+					alert(result.error)
+				}
+			}
+
+		
+				
+			
+    </script>
+</body>
+</html>

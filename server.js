@@ -5,19 +5,32 @@ const hbs = require('hbs');
 const nodemailer = require('nodemailer');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+//require
 const User = require('./model/user');
 const Mail = require('./model/mail');
 let GTOKEN = '';
+
 
 const JWT_SECRET = "isdhpojhposdfjpowefjpojpojh2094u093shis8yh98 4u093 4u 094u309u3049u0-3u0-233-=i0-3u093 u023r"
 
 const app = express();
 const port = process.env.PORT || 3000
-mongoose.connect('mongodb://localhost:27017/login-app-db',{
+//connect yaha se coonect kiye hai moonse se 
+//yha add karna hai 
+//mongodb+srv://atharva1371:<password>@cluster0.1nmuo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+//ok done
+//ye wala online rhega 
+mongoose.connect('mongodb+srv://atharva1371:Nilima1371@cluster0.1nmuo.mongodb.net/login-app-db?retryWrites=true&w=majority',{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true
 })
+// ye wala localhost ke liye rhega like for testing 
+// mongoose.connect('mongodb://localhost:27017/login-app-db',{
+//     useNewUrlParser:true,
+//     useUnifiedTopology:true,
+//     useCreateIndex:true
+// })
 
 console.log(mongoose.connection.readyState);
 

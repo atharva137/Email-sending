@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "main": "server.js"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +23,8 @@
     "mongoose-unique-validator": "^2.0.3",
     "nodemailer": "^6.6.2",
     "npm": "^7.19.0"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }

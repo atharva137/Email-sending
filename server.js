@@ -20,7 +20,7 @@ const port = process.env.PORT || 3000
 //mongodb+srv://atharva1371:<password>@cluster0.1nmuo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 //ok done
 //ye wala online rhega 
-mongoose.connect('mongodb+srv://atharva1371:Nilima1371@cluster0.1nmuo.mongodb.net/myFirstDatabase?authSource=admin&replicaSet=atlas-1554qt-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true',{
+mongoose.connect('mongodb+srv://atharva1371:Nilima1371@cluster0.1nmuo.mongodb.net/login-app-db?authSource=admin&replicaSet=atlas-1554qt-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true',{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true
